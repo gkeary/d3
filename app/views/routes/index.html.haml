@@ -1,0 +1,29 @@
+%h1 Listing routes
+
+%table
+  %tr
+    %th Route
+    %th Route name
+    %th Default driver
+    %th Driver message
+    %th D user
+    %th Terminal
+    %th
+    %th
+    %th
+
+  - @routes.each do |route|
+    %tr
+      %td= route.route_id
+      %td= route.route_name
+      %td= route.default_driver_id
+      %td= route.driver_message
+      %td= route.d_user
+      %td= route.terminal
+      %td= link_to 'Show', route
+      %td= link_to 'Edit', edit_route_path(route)
+      %td= link_to 'Destroy', route, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Route', new_route_path

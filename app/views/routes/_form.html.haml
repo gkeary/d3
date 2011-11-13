@@ -1,0 +1,28 @@
+= form_for @route do |f|
+  -if @route.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@route.errors.count, "error")} prohibited this route from being saved:"
+      %ul
+        - @route.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :route_id
+    = f.text_field :route_id
+  .field
+    = f.label :route_name
+    = f.text_field :route_name
+  .field
+    = f.label :default_driver_id
+    = f.text_field :default_driver_id
+  .field
+    = f.label :driver_message
+    = f.text_field :driver_message
+  .field
+    = f.label :d_user
+    = f.text_field :d_user
+  .field
+    = f.label :terminal
+    = f.text_field :terminal
+  .actions
+    = f.submit 'Save'

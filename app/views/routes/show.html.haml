@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Route:
+  = @route.route_id
+%p
+  %b Route name:
+  = @route.route_name
+%p
+  %b Default driver:
+  = @route.default_driver_id
+%p
+  %b Driver message:
+  = @route.driver_message
+%p
+  %b D user:
+  = @route.d_user
+%p
+  %b Terminal:
+  = @route.terminal
+
+= link_to 'Edit', edit_route_path(@route)
+\|
+= link_to 'Back', routes_path

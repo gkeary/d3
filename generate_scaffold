@@ -1,0 +1,22 @@
+#rails generate scaffold Person fname:string lname:string
+#rails generate scaffold Person fname:string lname:string
+#rails generate scaffold Person fname:string lname:string
+#rails generate scaffold Person fname:string lname:string
+#http://www.rubyinside.com/how-to-rails-3-and-rspec-2-4336.html
+
+
+rails generate  scaffold Route2 RouteID:string RouteName:string DefaultDriverID:string DriverMessage:string DUser:string Terminal:string 
+NOTE:  be sure to run rake spec  so that the TEST DB is cloned from DEV DB!!!
+
+rails generate scaffold Customer CustomerTableID:integer CustomerID:string CustomerName:string Address1:string Address2:string City:string State:string Phone:string Contact:string ClosingTime:string Comment:string DefaultRouteID:string DUser:string Terminal:string InfoString:string 
+
+rails g scaffold Pickup PickupTableID:integer DefaultRouteID:string PickupDate:datetime CustomerID:string DriverName:string RouteName:string CustomerName:string Comment:string Monday:boolean Tuesday:boolean Wednesday:boolean Thursday:boolean Friday:boolean Dispatched:boolean DispatchTime:datetime Notes:string 
+
+
+rails g scaffold Archive PickupArchiveID:integer PADefaultRouteID:string PAPickupDate:datetime PACustomerID:string PADriverName:string PADriverMessage:string PARouteName:string PACustomerName:string PAComment:string PADispatched:boolean PADispatchTime:datetime PADeleted:boolean PANotes:string 
+
+rails g scaffold CurrendDayRoute CurrentDayRouteID:integer CDRRouteID:string CDRRouteName:string CDRDefaultDriverID:string CDRDriverLastName:string CDRDriverMessage:string CDRStation:string CDRChecked:boolean CDRDate:datetime DUser:string Terminal:string 
+
+rails g scaffold CurrentDayPickup CurrentDayPickupID:integer CDPDefaultRouteID:string CDPPreviousRouteID:string CDPPickupDate:datetime CDPCustomerID:string CDPDriverName:string CDPDriverMessage:string CDPRouteName:string CDPCustomerName:string CDPComment:string CDPDispatched:boolean CDPDispatchTime:datetime CDPNotes:string CDPStation:string CDPChecked:boolean CDPDeleted:boolean PostedCount:integer Terminal:string 
+
+
